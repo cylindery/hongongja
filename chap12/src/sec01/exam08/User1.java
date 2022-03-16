@@ -1,0 +1,14 @@
+package sec01.exam08;   //User1 작업 스레드
+
+public class User1 extends Thread {
+    public Calculator calculator;
+
+    public void setCalculator(Calculator calculator) {
+        this.setName("User1");
+        this.calculator = calculator;
+    }
+
+    public void run() {
+        calculator.setMemory(100);
+    }
+}
